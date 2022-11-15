@@ -20,15 +20,13 @@ impl Blockchain {
             hash: String::default(),
         };
 
-        let mut chain = Vec::new();
-        chain.push(genesis_block.clone());
-        let blockchain = Blockchain {
+        let chain = vec![genesis_block.clone()];
+
+        Blockchain {
             genesis_block,
             chain,
             difficulty,
-        };
-
-        blockchain
+        }
     }
 
     pub fn add_block(&mut self, _nonce: String) {

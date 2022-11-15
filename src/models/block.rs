@@ -14,14 +14,13 @@ pub struct Block {
 
 impl Block {
     pub fn new(index: u64, previous_hash: String) -> Self {
-        let block = Block {
+        Block {
             index,
             timestamp: Utc::now().timestamp_millis() as u64,
             proof_of_work: u64::default(),
             previous_hash,
             hash: String::default(),
-        };
-        block
+        }
     }
 
     pub fn calculate_hash(&self) -> String {
