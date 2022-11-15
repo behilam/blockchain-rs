@@ -32,7 +32,7 @@ impl Blockchain {
     pub fn add_block(&mut self, _nonce: String) {
         let mut new_block = Block::new(
             self.chain.len() as u64,
-            self.chain[&self.chain.len() - 1].previous_hash.clone(),
+            self.chain[&self.chain.len() - 1].hash.clone(),
         );
 
         new_block.mine(self);
