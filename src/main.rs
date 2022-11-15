@@ -10,7 +10,12 @@ fn main() {
         count -= 1;
     }
 
-    println!();
+    println!(
+        "\n\
+==========
+= RESULT =
+=========="
+    );
     for block in blockchain.chain {
         println!("{:?}", block)
     }
